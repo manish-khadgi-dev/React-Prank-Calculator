@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-size: 1.3rem;
+  box-shadow: border-box;
+  font-family: consolas !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background: #333;
+ 
+
+  min-height: 100vh;
+}
+
+.wrapper {
+
+  display: flex;
+  justify-content:flex-start ;
+  align-items: center;
+}
+
+.calculator {
+  border-radius: 2px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+      10px 10px 70px rgba(0, 0, 0, 0.25),
+      inset -5px -5px 15px rgba(0, 0, 0, 0.5),
+      inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+      
+  background: linear-gradient(180deg,#2f2f2f,#231d1d2b);
+  backdrop-filter: blur(8.5px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10px;
+  width: 350px;
+  padding: 2rem 1.5rem;
+
+  /* grid */
+  display: grid;
+  gap: 1rem;
+
+  grid-template-areas:
+    "display display display display"
+    "ac c perc divide"
+    "btn7 btn8 btn9 multi"
+    "btn4 btn5 btn6 sub"
+    "btn1 btn2 btn3 plus"
+    "btn0 btn0 dot ans";
+}
+
+.calculator div {
+  background: rgba(7, 5, 5, 0.418);
+  color: #fff;
+   
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  filter: drop-shadow(-12px 12px 14px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+  cursor: pointer;
+  border: #2f2f2f;
+  box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+  0 0 0 2px rgba(0, 0, 0, 0.427),
+  10px 20px 25px rgba(0, 0, 0, 0.4);
+  
+}
+
+.calculator div ::before
+{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+}
+
+
+
+.calculator .display {
+  grid-area: display;
+  color: rgb(0, 1, 1);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  font-weight: 400 ;
+
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  font-family: "Orbitron", sans-serif;
+  background: rgb(109, 158, 121);
+  border-radius: 5px;
+
+  cursor: auto;
+}
+
+.btn-ac {
+  grid-area: ac;
+}
+
+.btn-c {
+  grid-area: c;
+}
+
+.btn-perc {
+  grid-area: perc;
+}
+
+.btn-divide {
+  grid-area: divide;
+}
+
+.btn-7 {
+  grid-area: btn7;
+}
+
+.btn-8 {
+  grid-area: btn8;
+}
+
+.btn-9 {
+  grid-area: btn9;
+}
+
+.btn-multi {
+  grid-area: multi;
+}
+
+.btn-4 {
+  grid-area: btn4;
+}
+
+.btn-5 {
+  grid-area: btn5;
+}
+
+.btn-6 {
+  grid-area: btn6;
+}
+
+.btn-sub {
+  grid-area: sub;
+}
+
+.btn-1 {
+  grid-area: btn1;
+}
+
+.btn-2 {
+  grid-area: btn2;
+}
+
+.btn-3 {
+  grid-area: btn3;
+}
+
+.btn-plus {
+  grid-area: plus;
+}
+
+.btn-0 {
+  grid-area: btn0;
+}
+
+.btn-dot {
+  grid-area: dot;
+}
+
+.btn-ans {
+  grid-area: ans;
+}
+
+.circle {
+  background: linear-gradient(to right, blue, purple);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  position: relative;
+  left: 80px;
+  top: 200px;
+}
+
+.prank {
+  animation: shake 0.5s;
+  background: red !important ;
+  color: white;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(10px);
+  }
+  50% {
+    transform: translate(-10px);
+  }
+  75% {
+    transform: translate(10px);
+  }
+  100% {
+    transform: translate(-10px);
+  }
+}
