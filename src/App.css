@@ -14,6 +14,8 @@ body {
  
 
   min-height: 100vh;
+ 
+  
 }
 
 .wrapper {
@@ -21,6 +23,13 @@ body {
   display: flex;
   justify-content:center ;
   align-items: center;
+
+ 
+}
+
+.calculator{
+  position: relative;
+  right: 6%;
 }
 
 .calculator {
@@ -48,6 +57,7 @@ body {
     "btn4 btn5 btn6 sub"
     "btn1 btn2 btn3 plus"
     "btn0 btn0 dot ans";
+    
 }
 
 .calculator div {
@@ -183,7 +193,7 @@ body {
   border-radius: 50%;
 
   position: relative;
-  left: 80px;
+  left: 0px;
   top: 200px;
 }
 
